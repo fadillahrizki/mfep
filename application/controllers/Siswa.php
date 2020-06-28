@@ -4,6 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Siswa extends CI_Controller{
     function __construct(){
         parent::__construct();
+        if(!isset($_SESSION["user"])){
+            header("location:/auth/login");
+        }
         $this->load->model(['siswa_model','kelas_model','kriteria_model','penilaian_model']);
     }
 

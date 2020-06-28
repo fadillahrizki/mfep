@@ -4,6 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Penilaian extends CI_Controller{
     function __construct(){
         parent::__construct();
+        if(!isset($_SESSION["user"])){
+            header("location:/auth/login");
+        }
         $this->load->model(['penilaian_model','kelas_model','guru_model','siswa_model','kriteria_model']);
     }
 

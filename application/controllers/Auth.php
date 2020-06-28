@@ -4,6 +4,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Auth extends CI_Controller{
     function __construct(){
         parent::__construct();
+        if(isset($_SESSION["user"])){
+            header("location:/");
+        }
         $this->load->model('pengguna_model');
     }
 

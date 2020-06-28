@@ -4,6 +4,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Kriteria extends CI_Controller{
     function __construct(){
         parent::__construct();
+        if(!isset($_SESSION["user"])){
+            header("location:/auth/login");
+        }else if($this->session->user->level == "guru"){
+            header("location:/");
+        }
         $this->load->model(['kriteria_model']);
     }
 
