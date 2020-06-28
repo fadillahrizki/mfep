@@ -1,0 +1,26 @@
+
+#text-print{
+    display: none;
+}
+
+@media print{
+    body {
+        visibility: hidden;
+    }
+
+    #text-print{
+        display: block;
+    }
+
+    #print {
+        position: fixed;
+        top:0;
+        left:0;
+        width: 100%;
+        visibility: visible;
+    }
+
+    #print table th:last-child, table td:last-child{
+        display: none;
+    }
+}
