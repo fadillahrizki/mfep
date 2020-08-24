@@ -5,11 +5,13 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-7">
-                            <img src="https://img.lovepik.com/photo/40006/0329.jpg_wh860.jpg!/fw/562" alt="Sekolah" class="img-fluid">
+                        	<center>
+                            <img src="/tut-wuri.jpg" alt="Sekolah" class="img-fluid">
+                            <h4>SMA Negeri 1 Aek Kuasan</h4>
+                            </center>
                         </div>
                         <div class="col-4">
                             <div class="text-center">
-                                <h4>SMA Negeri 1 Aek Kuasan</h4>
                                 <h2>Login</h2>
                             </div>
                             <?php if(isset($_SESSION['error'])):?>

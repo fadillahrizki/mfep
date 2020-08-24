@@ -15,6 +15,8 @@
                                 <input type="hidden" name="kriteria[<?=$i?>][id]" value="<?=$penilaian->items[$i]->id?>">
                                 <input type="hidden" name="kriteria[<?=$i?>][kriteria_id]" value="<?=$k->id?>">
                                 <label>Kriteria : <?=$k->nama?></label>
+                                <input type="text" name="kriteria[<?=$i?>][nilai]" value="<?=$penilaian->items[$i]->nilai?>" class="form-control">
+                                <?php /*
                                 <select name="kriteria[<?=$i?>][sub_kriteria_id]" class="form-control">
                                     <?php foreach($k->childs as $sk): ?>
                                         <?php if($penilaian->items[$i]->sub_kriteria_id == $sk->id): ?>
@@ -24,6 +26,7 @@
                                         <?php endif ?>
                                     <?php endforeach ?>
                                 </select>
+                                */ ?>
                             </div>
                         <?php $i++; endforeach; ?>
                     </div>

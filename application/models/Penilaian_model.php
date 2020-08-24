@@ -15,8 +15,8 @@ class Penilaian_model extends CI_Model{
         $total=0;
         foreach($get as $g){
             $g->kriteria = $this->db->where('id',$g->kriteria_id)->get('kriteria')->result()[0];
-            $g->sub_kriteria = $this->db->where('id',$g->sub_kriteria_id)->get('sub_kriteria')->result()[0];
-            $total += $g->sub_kriteria->nilai * $g->kriteria->bobot / 100 ;
+            // $g->sub_kriteria = $this->db->where('id',$g->sub_kriteria_id)->get('sub_kriteria')->result()[0];
+            $total += $g->nilai * $g->kriteria->bobot / 100 ;
         }
 
         $uT = $this->db->where('id',$penilaian_id)->set('total',$total)->update($this->tbl);

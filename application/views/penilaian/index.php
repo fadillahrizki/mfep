@@ -28,22 +28,24 @@
     <h4>SMA Negeri 1 Aek Kuasan</h4>
     <p>Negeri Dongeng, Kecamatan Semua, Kabupaten Berantah, Santuy</p>
   </div>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>NIS</th>
-        <th>Nama</th>
-        <?php foreach($kriteria as $k): ?>
-          <th><?=$k->nama?> ( <?=$k->bobot?> )</th>
-        <?php endforeach ?>
-        <th>Total</th>
-        <th>Keputusan</th>
-        <th>Aksi</th>
-      </tr>
-    </thead>
-    <tbody id="ctn"><tr><td colspan="8" class="text-center">Tidak ada data!</td></tr></tbody>
-  </table>
+  <div classs="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>NIS</th>
+          <th>Nama</th>
+          <?php foreach($kriteria as $k): ?>
+            <th><?=$k->nama?> ( <?=$k->bobot?> )</th>
+          <?php endforeach ?>
+          <th>Total</th>
+          <th>Keputusan</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="ctn"><tr><td colspan="12" class="text-center">Tidak ada data!</td></tr></tbody>
+    </table>
+  </div>
 </div>
 
 
@@ -56,17 +58,19 @@
           if(!res.length){
             tbody.innerHTML = `
             <tr>
-              <td colspan="8" class="text-center">Tidak ada data!</td>
+              <td colspan="12" class="text-center">Tidak ada data!</td>
             </tr>`;
           }else{
             tbody.innerHTML = '';
-            res.map((penilaian,index)=>{
+            res.forEach((penilaian,index) => {
+              var kriteria = ""
+              penilaian.items.forEach(item=>{kriteria += "<td>"+item.nilai+"</td>"})
               tbody.innerHTML += `
               <tr>
                 <th>${index+1}</th>
                 <td>${penilaian.siswa.NIS}</td>
                 <td>${penilaian.siswa.nama}</td>
-                ${penilaian.items.map(item=>`<td>${item.sub_kriteria.nama} ( ${item.sub_kriteria.nilai} )</td>`)}
+                ${kriteria}
                 <td>${penilaian.total}</td>
                 <td>${index+1 == 1 ? "Terpilih" : "-" }</td>
                 <td>
@@ -74,6 +78,7 @@
                 </td>
               </tr>`
             })
+            
           }
         })
   </script>
@@ -88,17 +93,19 @@
           if(!res.length){
             tbody.innerHTML = `
             <tr>
-              <td colspan="8" class="text-center">Tidak ada data!</td>
+              <td colspan="12" class="text-center">Tidak ada data!</td>
             </tr>`;
           }else{
             tbody.innerHTML = '';
-            res.map((penilaian,index)=>{
+            res.forEach((penilaian,index) => {
+              var kriteria = ""
+              penilaian.items.forEach(item=>{kriteria += "<td>"+item.nilai+"</td>"})
               tbody.innerHTML += `
               <tr>
                 <th>${index+1}</th>
                 <td>${penilaian.siswa.NIS}</td>
                 <td>${penilaian.siswa.nama}</td>
-                ${penilaian.items.map(item=>`<td>${item.sub_kriteria.nama} ( ${item.sub_kriteria.nilai} )</td>`)}
+                ${kriteria}
                 <td>${penilaian.total}</td>
                 <td>${index+1 == 1 ? "Terpilih" : "-" }</td>
                 <td>

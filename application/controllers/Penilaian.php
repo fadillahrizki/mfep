@@ -58,7 +58,8 @@ class Penilaian extends CI_Controller{
         if($ins){
             $penilaian = $this->penilaian_model->singleByKelasGuruNIS($post['kelas_id'],$post['guru_id'],$post['NIS']);
             foreach($post['kriteria'] as $item){
-                $item['penilaian_id'] = $penilaian->id;
+                $item['penilaian_id']    = $penilaian->id;
+                $item['sub_kriteria_id'] = 0;
                 $items = $this->penilaian_model->insertItem($item);
             }
 

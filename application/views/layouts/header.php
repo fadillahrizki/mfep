@@ -28,7 +28,7 @@
         <div class="col-md-12 col-lg-3 collapse" id="menu">
             <div class="detail text-center">
                 <?php if($this->session->user->jenis_kelamin == "Laki - Laki"): ?>
-                <img src="https://www.pngarts.com/files/5/User-Avatar-PNG-Free-Download.png" alt="Avatar" class="img-thumbnail border-0" style="border-radius:50%;" width="100">
+                <img src="/profil2.jpg" alt="Avatar" class="img-thumbnail border-0" style="border-radius:50%;" width="100">
                 <?php else: ?>
                 <img src="https://www.w3schools.com/w3images/avatar6.png" alt="Avatar" class="img-thumbnail border-0" style="border-radius:50%;" width="100">
                 <?php endif ?>

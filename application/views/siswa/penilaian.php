@@ -15,12 +15,15 @@
                             <div class="form-group">
                                 <input type="hidden" name="kriteria[<?=$i?>][kriteria_id]" value="<?=$k->id?>">
                                 <label>Kriteria : <?=$k->nama?></label>
+                                <input type="text" name="kriteria[<?=$i?>][nilai]" class="form-control">
+                                <?php /*
                                 <select name="kriteria[<?=$i?>][sub_kriteria_id]" class="form-control">
                                     <option disabled selected>- Pilih Sub Kriteria -</option>
                                     <?php foreach($k->childs as $sk): ?>
                                         <option value="<?=$sk->id?>"><?=$sk->nama?> (<?=$sk->nilai?>)</option>
                                     <?php endforeach ?>
                                 </select>
+                                */ ?>
                             </div>
                         <?php $i++; endforeach; ?>
                     </div>
