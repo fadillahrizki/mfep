@@ -8,6 +8,10 @@
         visibility: hidden;
     }
 
+    .hide-print {
+        display: none!important;
+    }
+
     #text-print{
         display: block;
     }
@@ -20,7 +24,7 @@
         visibility: visible;
     }
 
-    #print table th:last-child, table td:last-child{
+    /*#print table th:last-child, table td:last-child{
         display: none;
-    }
+    }*/
 }

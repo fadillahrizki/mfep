@@ -9,6 +9,7 @@
       <?php endforeach ?>
     </select>
     <?php endif ?>
+    <button class="btn btn-success hide-print" onclick="window.print()">Cetak</button>
 </div>
 
 <?php if(isset($this->session->successCreate)): ?>
@@ -25,8 +26,20 @@
 
 <div id="print" class="text-center">
   <div id="text-print" class="py-5">
-    <h4>SMA Negeri 1 Aek Kuasan</h4>
-    <p>Negeri Dongeng, Kecamatan Semua, Kabupaten Berantah, Santuy</p>
+    <table width="100%">
+      <tr>
+        <td width="150px">
+          <img src="/logo-pemprov.png" width="100px">
+        </td>
+        <td>
+          <h5 style="padding:0;margin:0;">PEMERINTAH PROVINSI SUMATERA UTARA</h5>
+          <h5 style="padding:0;margin:0;">DINAS PENDIDIKAN</h5>
+          <h2 style="padding:0;margin:0;">SMA NEGERI 1 AEK KUASAN</h2>
+          <p><i>Aek Loba Afd 1, Kec. Aek Kuasan, Kab. Asahan, Telepon : (0623) 351030, Kode Pos : 21275</i></p>
+        </td>
+      </tr>
+    </table>
+    <hr>
   </div>
   <div classs="table-responsive">
     <table class="table table-striped">
@@ -40,11 +53,31 @@
           <?php endforeach ?>
           <th>Total</th>
           <th>Keputusan</th>
-          <th>Aksi</th>
         </tr>
       </thead>
-      <tbody id="ctn"><tr><td colspan="12" class="text-center">Tidak ada data!</td></tr></tbody>
+      <tbody id="ctn"><tr><td colspan="11" class="text-center">Tidak ada data!</td></tr></tbody>
     </table>
+  </div>
+  <div id="text-print" class="py-5">
+    <table width="100%">
+      <tr>
+        <td width="50%">
+          Dibuat Oleh,<br>
+          Kepala Tata Usaha
+          <br><br><br>
+          SANGKOT ARMADI, S.Pd <br>
+          NIP. -
+        </td>
+        <td>
+          Disetujui Oleh,<br>
+          Kepala SMAN 1 Aek Kuasan
+          <br><br><br>
+          MAZLI, S.Pd <br>
+          NIP. 197409172006041002
+        </td>
+      </tr>
+    </table>
+    <hr>
   </div>
 </div>
 
@@ -58,7 +91,7 @@
           if(!res.length){
             tbody.innerHTML = `
             <tr>
-              <td colspan="12" class="text-center">Tidak ada data!</td>
+              <td colspan="11" class="text-center">Tidak ada data!</td>
             </tr>`;
           }else{
             tbody.innerHTML = '';
@@ -73,9 +106,6 @@
                 ${kriteria}
                 <td>${penilaian.total}</td>
                 <td>${index+1 == 1 ? "Terpilih" : "-" }</td>
-                <td>
-                  <button class="btn btn-success" onclick="window.print()">Cetak</button>
-                </td>
               </tr>`
             })
             
@@ -93,7 +123,7 @@
           if(!res.length){
             tbody.innerHTML = `
             <tr>
-              <td colspan="12" class="text-center">Tidak ada data!</td>
+              <td colspan="11" class="text-center">Tidak ada data!</td>
             </tr>`;
           }else{
             tbody.innerHTML = '';
@@ -108,9 +138,6 @@
                 ${kriteria}
                 <td>${penilaian.total}</td>
                 <td>${index+1 == 1 ? "Terpilih" : "-" }</td>
-                <td>
-                  <button class="btn btn-success" onclick="window.print()">Cetak</button>
-                </td>
               </tr>`
             })
           }
