@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h5>Tambah data Siswa</h5>
+            <h5>Tambah data Alternatif</h5>
             <form action="/siswa/insert" method="post">
                 <div class="form-group">
                     <label>NIS</label>

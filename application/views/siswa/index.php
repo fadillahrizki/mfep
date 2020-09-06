@@ -1,6 +1,6 @@
 
 <div class="py-3 d-flex justify-content-between">
-  <h3>Data Siswa</h3>
+  <h3>Data Alternatif</h3>
   <?php if($this->session->user->level == "admin"): ?>
   <a href="/siswa/create" class="btn btn-success">
     <svg class="bi bi-plus-circle" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

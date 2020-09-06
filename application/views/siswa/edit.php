@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h5>Edit data Siswa : <?=$siswa->nama?></h5>
+            <h5>Edit data Alternatif : <?=$siswa->nama?></h5>
             <form action="/siswa/update" method="post">
                 <div class="form-group">
                     <label>NIS</label>
