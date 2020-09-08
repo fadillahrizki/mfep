@@ -36,7 +36,7 @@
     <div class="col-md-12 col-lg-4 mb-3">
         <div class="card rounded-0">
             <div class="card-body bg-warning">
-                <h4><b>Data Siswa</b></h4>
+                <h4><b>Data Alternatif</b></h4>
                 <div class="row py-2">
                     <div class="col-md-12 col-lg-6">
                     <svg class="bi bi-people-fill" height="50" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
